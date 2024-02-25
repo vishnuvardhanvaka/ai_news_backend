@@ -1,7 +1,6 @@
-fastapi==0.68.0
-pyngrok==5.2.0
-uvicorn==0.15.0
-starlette==0.15.0
-ffmpeg==1.4.0
-nest-asyncio==1.5.1
-python-dotenv==0.19.1
+fastapi
+pyngrok
+uvicorn
+ffmpeg
+nest-asyncio
+python-dotenv
