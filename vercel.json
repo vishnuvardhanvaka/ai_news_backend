@@ -1,13 +1,24 @@
 {
-    "builds": [{
-        "src": "app/api.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb" }
-    }],
+    "builds": [
+        {
+            "src": "app/api.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb" }
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "app/api.py"
         }
-    ]
+    ],
+    "functions": {
+        "api": {
+            "runtime": "@vercel/python",
+            "memory": 512,
+            "includeFiles": {
+                "bin/ffmpeg": "/usr/bin/ffmpeg"
+            }
+        }
+    }
 }
